@@ -1,0 +1,26 @@
+﻿<link href="~/Content/reset.css" rel="stylesheet" />
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+       
+        <div class="fadeIn first">
+            <img src="~/images/admin.png" id="icon" alt="User Icon" />
+            <h4>Đăng nhập quản trị viên</h4>
+            <h5 style="color:red;text-align:center">@ViewBag.Thongbao</h5>
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <!-- Login Form -->
+            <form>
+                <input type="text" class="fadeIn second" name="username" placeholder="Tài khoản">
+                <input type="text" class="fadeIn third" name="password" placeholder="Mật khẩu">
+                <input type="submit" class="fadeIn fourth" value="Đăng nhập">
+            </form>
+        }
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" href="#">Quên mật khẩu?</a>
+        </div>
+
+    </div>
+</div>
